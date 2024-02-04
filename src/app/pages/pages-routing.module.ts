@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DrinkCardComponent } from '../@theme/components/drink-card/drink-card.component';
-import { DrinksGridPageComponent } from './drinks-grid-page/drinks-grid-page.component';
+import { PagesComponent } from './pages.component';
 
 const routes: Routes = [
   {
-    path: 'teste',
-    component: DrinksGridPageComponent
+    path: "home",
+    component: PagesComponent
   }
 ];
 

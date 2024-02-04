@@ -1,0 +1,65 @@
+.side-menu {
+  background: linear-gradient(0deg,   rgba(203,49,0,1) 0%, rgba(220,126,33,1) 35%, rgba(220,200,104,1) 100%);
+  width: 35%;
+  height: 100vh;
+  margin: 0px;
+
+  &__logo {
+    color: white;
+    font-size: 64px;
+    margin: auto;
+    margin-bottom: 25%;
+    font-family: 'Satisfy', cursive;
+    padding-top: 50px;
+    text-align: center;
+
+  }
+
+  &__content {
+
+    &__items {
+
+      &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+
+        &__content {
+          font-size: 32px;
+          font-family: 'Poppins', sans-serif;
+          display: flex;
+          align-items: center;
+          max-height: fit-content !important;
+
+          &__icon {
+            font-size: 42px;
+            height: fit-content;
+            min-width: 42px;
+            margin-right: 15%;
+          }
+
+          &__label {
+            margin: 0px;
+          }
+        }
+
+        &__content:hover{
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.selected {
+  background-color: rgba(255, 252, 252, 0.13);
+  width: 100%;
+  color: white;
+}
+
+
+
+
+
+
