@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
+import { PagesRoutingModule } from './pages-routing.module';
+import { ThemeModule } from '../@theme/theme.module';
+
 
 
 
@@ -9,7 +11,8 @@ import { PagesComponent } from './pages.component';
   declarations: [PagesComponent],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    ThemeModule
   ]
 })
 export class PagesModule { }
