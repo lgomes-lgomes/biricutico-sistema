@@ -1,0 +1,31 @@
+.drink-card {
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 2px 3px 5px 0.5em rgba(19, 19, 19, 0.048);
+  border-radius: 5px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    padding: 3% 6%;
+
+    &__title {
+      margin: 0;
+    }
+  }
+
+  &__image {
+
+    img {
+      width: 100%;
+    }
+  }
+
+  mat-icon {
+    transform: scale(1.2);
+  }
+}
+
+
+

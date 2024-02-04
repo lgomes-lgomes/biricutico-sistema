@@ -1,0 +1,14 @@
+.drinks-grid {
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3.33%;
+    row-gap: 4vh;
+
+    &__card {
+      width: 30%;
+    }
+  }
+}
