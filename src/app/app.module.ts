@@ -8,6 +8,7 @@ import { PagesModule } from './pages/pages.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DrinkGridService } from './services/drink-grid.service';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,10 @@ import { DrinkGridService } from './services/drink-grid.service';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+    }),
     AppRoutingModule,
     ThemeModule,
     PagesModule

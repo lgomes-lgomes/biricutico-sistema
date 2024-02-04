@@ -1,6 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IDrink } from '../../common/interfaces/IDrink';
 import { DrinksApi } from 'src/app/@core/api/v1/drinks.api';
+import { DrinkGridService } from 'src/app/services/drink-grid.service';
+import { IDrinkFilter } from '../../common/interfaces/IDrinkFIlter';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-drinks-grid',
@@ -11,10 +14,17 @@ export class DrinksGridComponent implements OnInit {
 
   constructor(
     public api: DrinksApi,
+    public service: DrinkGridService,
+    public router: Router
   ) {}
 
+  public filters: IDrinkFilter[] = []
+
   ngOnInit(): void {
-    this.setGridSource();
+    this.service.getValue().subscribe((value) => {
+      this.filters = value;
+      this.setGridSource();
+    });
   }
   public drinks: IDrink[] = [];
 
@@ -22,10 +32,12 @@ export class DrinksGridComponent implements OnInit {
 
     // this.drinks = await this.api.get();
 
-    this.drinks = [
+    console.log(this.filters);
+
+      const drinksSource = [
       {
         name: 'teste',
-        favourite: true,
+        favourite: false,
       },
       {
         name: 'teste',
@@ -33,12 +45,18 @@ export class DrinksGridComponent implements OnInit {
       },
       {
         name: 'teste',
-        favourite: true,
+        favourite: false,
       },
       {
         name: 'teste',
         favourite: true,
       },
     ]
+
+    const listFavorites = this.filters.find((filter) => filter.value === 'favoritos');
+
+
+
+    this.drinks = listFavorites ? drinksSource.filter((drink) => drink.favourite) : drinksSource;
   }
 }

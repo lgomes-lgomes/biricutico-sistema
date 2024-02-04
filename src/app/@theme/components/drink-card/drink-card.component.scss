@@ -10,6 +10,12 @@
     height: fit-content;
     padding: 3% 6%;
 
+    &__icon {
+      background: linear-gradient(0deg,   rgba(203,49,0,1) 0%, rgba(220,126,33,1) 35%, rgba(220,200,104,1) 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
     &__title {
       margin: 0;
     }

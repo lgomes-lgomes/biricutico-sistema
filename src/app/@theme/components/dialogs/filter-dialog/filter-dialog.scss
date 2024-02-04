@@ -8,6 +8,17 @@
 
 .modal-wrapper {
   font-family: 'Poppins', sans-serif;
+  padding: 16px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+      margin: 0;
+    }
+  }
 
   &__content {
     &__values {
@@ -32,12 +43,20 @@
   &__buttons {
     display: flex;
     margin-top: 24px;
+    align-items: center;
+    column-gap: 12px;
 
     &__confirm {
       border-radius: 16px;
       padding: 12px 24px;
       color: white;
       background: linear-gradient(0deg,   rgba(203,49,0,1) 0%, rgba(220,126,33,1) 35%, rgba(220,200,104,1) 100%);
+    }
+
+    &__reset-filters {
+      border-radius: 16px;
+      padding: 12px 24px;
+      border: 1px solid black;
     }
   }
 }

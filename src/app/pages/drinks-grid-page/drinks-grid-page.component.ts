@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DrinkGridService } from 'src/app/services/drink-grid.service';
 
 @Component({
   selector: 'app-drinks-grid-page',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./drinks-grid-page.component.scss']
 })
 export class DrinksGridPageComponent {
-
+  constructor(
+    public drinksGridService: DrinkGridService,
+  ) {}
 }

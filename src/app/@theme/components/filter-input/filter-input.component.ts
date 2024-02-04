@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { FilterDialog } from '../dialogs/filter-dialog/filter-dialog';
 import {Dialog, DIALOG_DATA, DialogModule} from '@angular/cdk/dialog';
+import { DrinkGridService } from 'src/app/services/drink-grid.service';
+import { IDrinkFilter } from '../../common/interfaces/IDrinkFIlter';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -11,16 +14,30 @@ import {Dialog, DIALOG_DATA, DialogModule} from '@angular/cdk/dialog';
 })
 export class FilterInputComponent {
   constructor(
-    public dialog: Dialog
+    public dialog: Dialog,
+    public gridService: DrinkGridService,
+    private toastrService: ToastrService,
   ) {}
 
   public filters = [];
 
+
   public onFilterClick() {
-    const dialogRef = this.dialog.open(FilterDialog, {
+    const dialogRef = this.dialog.open<IDrinkFilter[]>(FilterDialog, {
       minWidth: '400px',
       data: {
         filters: [
+          {
+            title: 'Favorito',
+            values: [
+              {
+                label: 'Favorito',
+                value: 'favoritos',
+                selected: false,
+              },
+
+            ]
+          },
           {
             title: 'Bebidas',
             values: [
@@ -75,9 +92,12 @@ export class FilterInputComponent {
       },
     });
 
-    dialogRef.closed.subscribe(result => {
-      console.log(result);
-
+    dialogRef.closed.subscribe((result) => {
+      if(result) {
+        this.gridService.onFilterChange(result);
+      } else {
+        this.toastrService.show('Filtro', 'Nenhum filtro selecionado')
+      }
     });
   }
 }

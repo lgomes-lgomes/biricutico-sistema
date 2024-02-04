@@ -12,24 +12,6 @@ export class DrinkCardComponent {
   public drink!: IDrink;
 
  public favouriteDrink() {
-  console.log('favourite');
-
-  let menuItens = [
-    {
-      label: 'teste',
-      icon: 'dhaad',
-      class: ''
-    }
-  ]
-
-
-  menuItens.forEach((item => {
-    if(item.label === 'etste') {
-      item.class = 'selected'
-    } else {
-      item.class = ''
-
-    }
-  }))
+  this.drink.favourite = !this.drink.favourite;
  }
 }
