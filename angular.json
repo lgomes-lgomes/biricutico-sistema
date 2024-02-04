@@ -107,5 +107,8 @@
       }
     }
   },
-  "defaultProject": "biricutico-sistema"
+  "defaultProject": "biricutico-sistema",
+  "cli": {
+    "analytics": false
+  }
 }
