@@ -1,0 +1,24 @@
+
+<div class="modal-wrapper">
+  <div class="modal-wrapper__header">
+    <h2 class="modal-wrapper__header__title">Filtros</h2>
+    <mat-icon (click)="ref.close()" class="modal-wrapper__header__filter">close</mat-icon>
+  </div>
+  <div class="modal-wrapper__content">
+    <ng-container *ngFor="let filter of filters.filters">
+      <div class="modal-wrapper__content__values">
+        <h4 class="modal-wrapper__content__values__title">{{filter.title}}</h4>
+        <div class="modal-wrapper__content__values__items">
+        <ng-container *ngFor="let item of filter.values">
+            <div (click)="onFilterItemClick(item)" [ngClass]="item.selected ? 'selected' : ''" class="modal-wrapper__content__values__items__item">{{item.label}}</div>
+          </ng-container>
+        </div>
+        <hr class="modal-wrapper__content__values__divider">
+      </div>
+    </ng-container>
+  </div>
+  <div class="modal-wrapper__buttons">
+    <div (click)="confirmFiltersClick()" class="modal-wrapper__buttons__confirm">Buscar</div>
+    <div (click)="this.ref.close([])" class="modal-wrapper__buttons__reset-filters">Limpar filtros</div>
+  </div>
+</div>

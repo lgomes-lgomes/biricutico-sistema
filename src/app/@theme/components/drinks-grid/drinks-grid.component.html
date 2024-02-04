@@ -1,0 +1,7 @@
+<div class="drinks-grid">
+  <div class="drinks-grid__content">
+    <ng-container *ngFor="let drink of drinks">
+      <app-drink-card [drink]="drink" class="drinks-grid__content__card"></app-drink-card>
+    </ng-container>
+  </div>
+</div>
