@@ -4,6 +4,7 @@ import { ComponentsModule } from './components/components.module';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 
@@ -14,14 +15,11 @@ const MODULES = [
   MatIconModule,
   MatButtonModule,
   MatMenuModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatInputModule,
 ]
 
 @NgModule({
-  declarations: [],
-  imports: [
-    ...MODULES,
-  ],
   exports: [
     ...MODULES,
   ]
