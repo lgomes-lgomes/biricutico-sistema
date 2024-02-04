@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IDrink } from '../../common/\'/IDrink';
+import { IDrink } from '../../common/interfaces/IDrink';
 import { DrinksApi } from 'src/app/@core/api/v1/drinks.api';
 
 @Component({

@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { IMenuItem } from '../@theme/commun/intefaces/IMenuItem';
+import { IMenuItem } from '../@theme/common/interfaces/IMenuItem';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -14,7 +14,10 @@ export class PagesComponent implements OnInit{
   ){}
 
   ngOnInit(): void {
+    const url = this.router.url.split('/')[2]
 
+    const menuItem = this.menuItems.find((menuItem) => menuItem.route.includes(url))
+    this.setSelectedMenuItem(menuItem!);
   }
 
   public menuItems: IMenuItem[] = [
@@ -23,7 +26,13 @@ export class PagesComponent implements OnInit{
       icon: "home",
       class: "",
       route: "pages/home"
-    }
+    },
+    {
+      label: "Teste",
+      icon: "search",
+      class: "",
+      route: "pages/test"
+    },
   ]
 
   public setSelectedMenuItem(menuItem: IMenuItem){

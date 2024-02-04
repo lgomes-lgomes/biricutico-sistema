@@ -1,0 +1,48 @@
+
+:host {
+  display: block;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+.modal-wrapper {
+  font-family: 'Poppins', sans-serif;
+
+  &__content {
+    &__values {
+      &__items {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+
+         &__item {
+          border: 1px solid black;
+          border-radius: 16px;
+          padding: 8px 12px;
+         }
+      }
+
+      &__divider {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    margin-top: 24px;
+
+    &__confirm {
+      border-radius: 16px;
+      padding: 12px 24px;
+      color: white;
+      background: linear-gradient(0deg,   rgba(203,49,0,1) 0%, rgba(220,126,33,1) 35%, rgba(220,200,104,1) 100%);
+    }
+  }
+}
+
+.selected {
+  color: white;
+  background: linear-gradient(0deg,   rgba(203,49,0,1) 0%, rgba(220,126,33,1) 35%, rgba(220,200,104,1) 100%);
+}

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IDrink } from '../../common/\'/IDrink';
+import { IDrink } from '../../common/interfaces/IDrink';
 
 @Component({
   selector: 'app-drink-card',

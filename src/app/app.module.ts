@@ -7,6 +7,7 @@ import { ThemeModule } from './@theme/theme.module';
 import { PagesModule } from './pages/pages.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DrinkGridService } from './services/drink-grid.service';
 
 @NgModule({
   declarations: [
@@ -14,12 +15,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
     ThemeModule,
     PagesModule
   ],
-  providers: [],
+  providers: [DrinkGridService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

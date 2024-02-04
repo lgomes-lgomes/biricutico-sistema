@@ -1,7 +1,11 @@
+mat-drawer-container {
+  height: 100vh;
+}
+
 .side-menu {
   background: linear-gradient(0deg,   rgba(203,49,0,1) 0%, rgba(220,126,33,1) 35%, rgba(220,200,104,1) 100%);
-  width: 25%;
-  // height: 100vh;
+  width: 27%;
+  height: 100vh;
   margin: 0px;
 
   &__logo {

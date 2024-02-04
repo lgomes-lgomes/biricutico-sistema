@@ -1,3 +1,4 @@
+import { DialogModule } from '@angular/cdk/dialog';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ComponentsModule } from './components/components.module';
@@ -17,6 +18,7 @@ const MODULES = [
   MatMenuModule,
   MatSidenavModule,
   MatInputModule,
+  DialogModule
 ]
 
 @NgModule({
