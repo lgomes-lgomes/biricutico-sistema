@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ThemeModule } from './@theme/theme.module';
 import { PagesModule } from './pages/pages.module';
 
 @NgModule({
@@ -12,6 +13,7 @@ import { PagesModule } from './pages/pages.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ThemeModule,
     PagesModule
   ],
   providers: [],
